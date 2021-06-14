@@ -3,15 +3,15 @@ using System.IO;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace OpenWeather
+namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var ApiKey = "6e580dbe0bd8f39079f9ced680c9f682";
+            var ApiKey = "2e0e6d59a50c44301f776b63df46a344";
             var City = "Kazan";
-            var url = $"https://api.openweathermap.org/data/2.5/weather?appid={ApiKey}&q={City}&units=metric";
+            var url = $"https://apidata.mos.ru/v1/datasets/610/rows?api_key={ApiKey}";
 
             var request = WebRequest.Create(url);
 
@@ -28,8 +28,7 @@ namespace OpenWeather
             {
                 string result = streamReader.ReadToEnd();
                 Console.WriteLine(result);
-                var weatherForecast = JsonConvert.DeserializeObject<Root>(result);
-                Console.WriteLine(weatherForecast.main.temp);
+                var weatherForecast = JsonConvert.DeserializeObject<Class1>(result);
             }
 
         }
