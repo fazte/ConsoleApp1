@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class Class1
+    class Json
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
         public class PublicPhone

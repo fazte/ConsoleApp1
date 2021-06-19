@@ -28,7 +28,7 @@ namespace ConsoleApp1
             {
                 string result = streamReader.ReadToEnd();
                 Console.WriteLine(result);
-                var weatherForecast = JsonConvert.DeserializeObject<Class1>(result);
+                var weatherForecast = JsonConvert.DeserializeObject<Json>(result);
             }
 
         }
